@@ -24,7 +24,7 @@ public class Ejercicio1 {
         System.out.printf("Módulo: %.2f \n", a % b);
     }
 
-    static float getNumber() {
+    static double getNumber() {
         while(true) {
             try {
                 return dataInput.nextFloat();
