@@ -16,6 +16,7 @@ public class Ejercicio1 {
         double a = getNumber();
         System.out.println("Introduce el segundo número:");
         double b = getNumber();
+        dataInput.close();
 
         System.out.printf("Suma: %.2f \n", a + b);
         System.out.printf("Resta: %.2f \n", a - b);
