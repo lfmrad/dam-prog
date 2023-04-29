@@ -28,12 +28,13 @@ public class Ejercicio2 {
     }
 
     static double getNumber() {
-        while(true) {
+        while (true) {
             try {
                 return scanner.nextDouble();
             } catch (InputMismatchException e) {
-                scanner.next();
                 System.out.println("Error de entrada. Introduce un valor númerico.");
+            } finally {
+                scanner.nextLine();
             }
         }
     }

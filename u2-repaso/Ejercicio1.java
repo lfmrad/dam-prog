@@ -9,7 +9,7 @@ import java.util.InputMismatchException;
 import java.text.DecimalFormat;
 
 public class Ejercicio1 {
-    static Scanner dataInput = new Scanner(System.in);
+    static Scanner scanner = new Scanner(System.in);
     static DecimalFormat df = new DecimalFormat("#.##");
 
     public static void main(String[] args) {
@@ -18,7 +18,7 @@ public class Ejercicio1 {
         double a = getNumber();
         System.out.println("Introduce el segundo número:");
         double b = getNumber();
-        dataInput.close();
+        scanner.close();
 
         System.out.println("Suma: " + df.format(a + b));
         System.out.println("Resta: " + df.format(a - b));
@@ -28,12 +28,13 @@ public class Ejercicio1 {
     }
 
     static double getNumber() {
-        while(true) {
+        while (true) {
             try {
-                return dataInput.nextDouble();
+                return scanner.nextDouble();
             } catch (InputMismatchException e) {
-                dataInput.next();
                 System.out.println("La entrada no es válida. Introduce un número decimal.");
+            } finally {
+                scanner.nextLine();
             }
         }
     }

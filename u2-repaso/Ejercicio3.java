@@ -13,6 +13,7 @@ public class Ejercicio3 {
     public static void main(String[] args) {
         System.out.println("Introduce un número entero positivo de 5 digitos:");
         int num = getValidatedNumber();
+        scanner.close();
         System.out.println("El número al revés es: " + invertNumberWithMath(num));
     }
 
@@ -50,7 +51,6 @@ public class Ejercicio3 {
                 System.out.println(e.getMessage());
             } finally {
                 scanner.nextLine();
-                
             }
         }
     }
