@@ -6,9 +6,11 @@ muestre por pantalla la suma, resta, multiplicación, división y módulo de los
 
 import java.util.Scanner;
 import java.util.InputMismatchException;
+import java.text.DecimalFormat;
 
 public class Ejercicio1 {
     static Scanner dataInput = new Scanner(System.in);
+    static DecimalFormat df = new DecimalFormat("#.##");
 
     public static void main(String[] args) {
         System.out.println("Introduce dos números para calcular su suma, resta, multiplicación, división y módulo.");
@@ -18,11 +20,11 @@ public class Ejercicio1 {
         double b = getNumber();
         dataInput.close();
 
-        System.out.printf("Suma: %.2f \n", a + b);
-        System.out.printf("Resta: %.2f \n", a - b);
-        System.out.printf("Multiplicación: %.2f \n", a * b);
-        System.out.printf("Devisión: %.2f \n", a / b);
-        System.out.printf("Módulo: %.2f \n", a % b);
+        System.out.println("Suma: " + df.format(a + b));
+        System.out.println("Resta: " + df.format(a - b));
+        System.out.println("Multiplicación: " + df.format(a * b));
+        System.out.println("Devisión: " + df.format(a / b));
+        System.out.println("Módulo: " + df.format(a % b));
     }
 
     static double getNumber() {
