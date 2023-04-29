@@ -27,7 +27,7 @@ public class Ejercicio1 {
     static double getNumber() {
         while(true) {
             try {
-                return dataInput.nextFloat();
+                return dataInput.nextDouble();
             } catch (InputMismatchException e) {
                 dataInput.next();
                 System.out.println("La entrada no es válida. Introduce un número decimal.");
