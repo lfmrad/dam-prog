@@ -34,7 +34,9 @@ public class Carrito {
     }
 }
 
-/*Contenido del carrito
+/* MENSAJE DE REFERENCIA PARA IMPLEMENTAR toString
+
+Contenido del carrito
 =====================
 Tarjeta SD 64Gb PVP: 19,95 Unidades: 2 Subtotal: 39,90
 Canon EOS 2000D PVP: 449,00 Unidades: 1 Subtotal: 449,00
