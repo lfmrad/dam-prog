@@ -13,7 +13,6 @@ public class PrimosLeer {
             String line;
             while((line = br.readLine()) != null) {
                 System.out.print(line + " ");
-                line = br.readLine();
             }
         } catch (IOException e) {
             System.out.println("Exception: " + e.getMessage());
