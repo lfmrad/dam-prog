@@ -1,7 +1,6 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -39,7 +38,7 @@ public class Estudiante {
         return grades[gradeNumber-1];
     }
 
-    public double aveGrade() {
+    public double getAverageGrade() {
         double sum = 0;
         for (double d : grades) {
             sum += d;
@@ -49,12 +48,13 @@ public class Estudiante {
 
     @Override
     public String toString() {
-        String objectInfo = "\nDatos estudiante: \n";
+        String objectInfo = "\n=== Datos estudiante ===\n";
         objectInfo += "Nombre: " + this.name + "\n";
         objectInfo += "Edad: " + this.age + "\n";
         objectInfo += "Nota1: " + this.grades[0] + "\n";
         objectInfo += "Nota2: " + this.grades[1] + "\n";
         objectInfo += "Nota3: " + this.grades[2] + "\n";
+        objectInfo += "Nota media: " + String.format("%.2f", getAverageGrade()) + "\n";
         return objectInfo;
     }
 
@@ -95,8 +95,8 @@ public class Estudiante {
         }
         System.out.println("Se lee la lista del archivo y se muestran los estudiantes nuevos:");
         try { 
-            for (Estudiante estudiante : leerEstudiantes("estudiantes.txt")) {
-                System.out.println(estudiante);
+            for (Estudiante nuevoEstudiante : leerEstudiantes("estudiantes.txt")) {
+                System.out.println(nuevoEstudiante);
             }
         } catch (IOException e) {
             System.out.println("Excepción: " + e.getMessage());
